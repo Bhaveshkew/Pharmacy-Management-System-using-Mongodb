@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>node js mongodb delete by _id</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    
+<style>
+    body {margin:0;}
+* {
+  box-sizing: border-box;}
+.user-detail {
+    height: 50vh;
+    border: 2px solid #f1f1f1;
+    padding: 16px;
+    background-color: white;
+    width: 30%;}
+input{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;}
+button[type=submit] {
+    background-color: #434140;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;}
+label{
+  font-size: 18px;;}
+button[type=submit]:hover {
+  background-color:#3d3c3c;}
+  .form-title a, .form-title h2{
+   display: inline-block;
+   
+  }
+  .form-title a{
+      text-decoration: none;
+      font-size: 20px;
+      background-color: green;
+      color: honeydew;
+      padding: 2px 10px;
+  }
+  body {
+  background-image: url('pha.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+ 
+<body>
+    <ul>
+  <li><a href="up">UPDATE DRUG</a></li>
+  <li><a href="ins">INSERT DRUG</a></li>
+  <li><a class="active"href="del">DELETE DRUG</a></li>
+</ul>
+<br><br><br>
+     <center>
+    
+<div class="user-detail">
+    <div class="form-title">
+    <h2>DELETE DRUG</h2>
+    </div>
+    <hr>
+    <form action="/pharmacy/del" method="POST">
+          <label>DRUG NAME</label>
+          <input type="text" placeholder="Enter Drug Name" name="dname" required value="">
+          
+          <button type="submit">DELETE</button>
+    </form>
+</div>
+</div>
+</center>
+</body>
+ 
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h2>Purchase Records</h2>
+        <table className="table-bordered" border = "1" style = "border: 2px solid black; border-spacing : 3px">
+    <tbody>
+   <tr><th><b>Customer First Name</b></th><th><b>Customer Last Name</b></th><th><b>Email</b></th><th><b>Doctor</b></th><th><b>Purchase Date</b></th><th><b>Medicine Name</b></th><th><b>Quantity</b></th></tr>  
+    {{#each data}}
+        <tr>  
+          <td> {{this.fname}} </td> 
+          <td> {{this.lname}} </td> 
+          <td> {{this.email}} </td>                        
+	      <td> {{this.doctorr}} </td>  
+          <td> {{this.dpurchase}}  </td>   
+          <td> {{this.medn}} </td>
+          <td> {{this.medq}} </td>   
+        </tr>  
+    {{/each}}
+    </tbody>  
+    </table>  
+     </div>  
+    </body>
+</html>

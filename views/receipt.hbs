@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br><br><br><br><br><br><br>
+
+    <div class="container">
+        <div class='row'>
+
+            <div class="col-leg-3"></div>
+
+            <div class="col-leg-6">
+                <div id="ui">
+                    <form action = "/pharmacy/receipt" method = "post" class=form-group>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>First Name</label>
+                                <input type="text" name = "fname" class="form-control" placeholder="Enter Your First Name..">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Last Name</label>
+                                <input type="text" name = "lname" class="form-control" placeholder="Enter Your Last Name..">
+                            </div>
+
+                        </div>
+                        <br>
+                        <label>E-mail</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your E-mail..">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Medicine Prescribed by:</label>
+                                <input type="text" name = "doctorr" class="form-control" placeholder="Enter Your Doctor's Name">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Date of Purchase</label>
+                                <input type="text" name = "dpurchase" class="form-control" placeholder="Enter your Purchasing date.">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Medicine Name:</label>
+                                <input type="text" name = "medn" class="form-control" placeholder="Name of Medicine">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Medicine Quantity :</label>
+                                <input type="number" name = "medq" class="form-control" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <br>
+                        
+
+                        <button type="submit" name="data" value="print" class="btn btn-primary btn-block btn-lg">Add Data</button>
+                    </form>
+                    <form action  = "/pharmacy/data" method = "post">    
+                        <button type="submit" name="purinfo" value="print" class="btn btn-primary btn-block btn-lg">Get Purchase Info</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-leg-3"></div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

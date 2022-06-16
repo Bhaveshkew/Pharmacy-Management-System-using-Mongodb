@@ -1,0 +1,114 @@
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;}
+.user-detail {
+    height: 100vh;
+    border: 2px solid #f1f1f1;
+    padding: 16px;
+    background-color: white;
+    width: 30%;}
+input{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;}
+button[type=submit] {
+    background-color: #434140;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;}
+label{
+  font-size: 18px;;}
+button[type=submit]:hover {
+  background-color:#3d3c3c;}
+  .form-title a, .form-title h2{
+   display: inline-block;
+   
+  }
+  .form-title a{
+      text-decoration: none;
+      font-size: 20px;
+      background-color: green;
+      color: honeydew;
+      padding: 2px 10px;
+  }
+  body {
+  background-image: url('pha.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<ul>
+  <li><a href="up">UPDATE DRUG</a></li>
+  <li><a class="active" href="ins">INSERT DRUG</a></li>
+  <li><a href="del">DELETE DRUG</a></li>
+</ul>
+<br><br>
+<center>
+    
+<div class="user-detail">
+    <div class="form-title">
+    <h2>INSERT DRUG</h2>
+    </div>
+    <hr>
+    <form action="/pharmacy/ins" method="POST">
+          <label>DRUG NAME</label>
+          <input type="text" placeholder="Enter Drug Name" name="dname" required value="">
+          <label>DRUG MANUFACTURED BY</label>
+          <input type="text" placeholder="Enter Drug Manufacturer Name" name="dmfd" required value="">
+          <label>DRUG QUANTITY</label>
+          <input type="number" placeholder="Enter Drug Quantity" name="dqty" required value="">
+          <label>DRUG AMOUNT</label>
+          <input type="number" placeholder="Enter Drug Price" name="dprice" required value="">
+          <button type="submit">INSERT</button>
+    </form>
+        </div>
+</div>
+</center>
+</html>
